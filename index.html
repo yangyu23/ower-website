@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      /* *{
+     border: 1px solid black;
+    } */
+      .flex {
+        display: flex;
+      }
+      .baise {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .yinying {
+        box-shadow: rgba(215, 211, 211, 0.981) 1.95px 1.95px 2.6px;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .card {
+        width: auto;
+        height: 245px;
+        border-radius: 2px;
+        background: #ffffff;
+        display: flex;
+        gap: 5px;
+        padding: 0.4em;
+      }
+      .card p {
+        height: 100%;
+        flex: 1;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 2px;
+        transition: all 0.5s;
+        background: white;
+        border: 1px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card p:hover {
+        flex: 4;
+      }
+
+      .card p span {
+        min-width: 14em;
+        padding: 0.5em;
+        text-align: center;
+        transform: rotate(-45deg);
+        transition: all 0.5s;
+        text-transform: uppercase;
+        color: rgb(119, 117, 117);
+        letter-spacing: 0.1em;
+      }
+
+      .card p:hover span {
+        transform: rotate(360deg);
+      }
+      .xiuwei {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: x-large;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+      }
+      .gongfa {
+        padding: 10px 20px;
+        border-bottom: 1px solid white;
+        font-size: 15px;
+      }
+      .jingli {
+        font-size: 30px;
+        padding: 10px 20px;
+        margin-left: 15px;
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!--侧边栏-->
+    <div style="width: 200px; z-index: 2" class="baise flex column yinying">
+      <div
+        style="
+          padding: 5px;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid rgb(252, 252, 252);
+        "
+        class="card baise yinying"
+      >
+        <p style="font-size: 150%"><span>凡人修仙传</span>></p>
+      </div>
+      <div class="flex1">
+        <div class="gongfa yinying">长春功</div>
+        <div class="gongfa yinying">眨眼剑法</div>
+        <div class="gongfa yinying">火弹术</div>
+        <div class="gongfa yinying">青元剑诀</div>
+        <div class="gongfa yinying">大衍诀</div>
+      </div>
+    </div>
+    <!--主区域-->
+    <div class="flex1 flex column">
+      <!--头部栏 -->
+      <div style="height: 60px; z-index: 1" class="baise yinying"></div>
+      <!--内容区 -->
+      <div class="flex1 flex" style="overflow: auto">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flex column mg8">
+          <!--数据区  -->
+          <div class="flex">
+            <!-- 数据块 -->
+            <div style="height: 100px" class="flex1 baise mgr8 yinying">
+              <p style="margin-left: 70px" class="xiuwei">练气</p>
+            </div>
+            <div style="height: 100px" class="flex1 baise mgr8 yinying">
+              <p style="margin-left: 70px" class="xiuwei">筑基</p>
+            </div>
+            <div style="height: 100px" class="flex1 baise mgr8 yinying">
+              <p style="margin-left: 70px" class="xiuwei">结丹</p>
+            </div>
+            <div style="height: 100px" class="flex1 baise yinying">
+              <p style="margin-left: 70px" class="xiuwei">元婴</p>
+            </div>
+          </div>
+          <!-- 列表区 -->
+          <div class="flex column">
+            <!-- 列表项 -->
+            <div style="height: 160px" class="baise mgt8 yinying">
+              <p class="jingli">始于七玄门</p>
+            </div>
+            <div style="height: 160px" class="baise mgt8 yinying">
+              <p class="jingli">加入黄枫谷</p>
+            </div>
+            <div style="height: 160px" class="baise mgt8 yinying">
+              <p class="jingli">遁走乱星海</p>
+            </div>
+            <div style="height: 160px" class="baise mgt8 yinying">
+              <p class="jingli">拜入落云宗</p>
+            </div>
+          </div>
+        </div>
+        <!-- 右区 -->
+        <div style="flex: 1" class="flex column mgr8 mgt8">
+          <!-- 提示区 -->
+          <div style="height: 150px" class="baise yinying"></div>
+          <!-- 消息区 -->
+          <div style="height: 400px" class="baise mgt8 yinying"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
